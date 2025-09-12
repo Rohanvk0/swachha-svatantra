@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body> 
+
+ <div class="brand">
+    <img src="all images/Screenshot_2025-08-28_110221-removebg-preview (1).png" alt="logo">
+    <div class="norms"> 
+      <a href="segrigation.html" id="normal"> Home</a>
+      <a href="segrigation.html" id="normal"> About</a>
+      <a href="service.html" id="normal">My Services</a>
+      <a href="complaint.html" id="normal">Complaint</a>
+      <a href="segrigation.html" id="normal">Contact Us</a>
+    </div>
+ </div>
+
+<div class="register">
+  <div class="register-box">
+   
+    <!-- Left Section -->
+    <div class="register-left">
+      <img src="all images/Screenshot_2025-08-28_110221-removebg-preview (1).png" alt="Logo" class="logo">
+      <h2>Welcome</h2>
+      <p>" स्वच्छ भारत अभियान का,
+         ये सपना तभी सच हो पाएगा।
+        हर एक मनुष्य जाग्रत होकर जब, 
+        स्वच्छता को जीवन का लक्ष्य बनाएगा। "</p>
+      <a href="login.html" class="btn-light">Login</a>
+    </div>
+
+    <!-- Right Section -->
+    <div class="register-right">
+      <h2>Create your account</h2>
+      
+      <form id="registerForm">
+        <!-- Role + Employee ID + Job -->
+        <div class="form-row">
+          <div class="form-group role">
+            <label>Select Your Role</label>
+            <select id="roleSelect" required>
+              <option selected disabled>Select Your Role</option>
+              <option>CITIZEN</option>
+              <option>EMPLOYEE</option>
+            </select>
+          </div>
+
+          <div class="form-group employee-id" id="employeeIdGroup" style="display:none;">
+            <label>Employee ID</label>
+            <input type="text" placeholder="Enter Employee ID">
+          </div>
+
+          <div class="form-group job" id="jobGroup" style="display:none;">
+            <label>Select Your Job</label>
+            <select id="jobSelect">
+              <option selected disabled>Select Your Job</option>
+              <option>SWEEPER WORKER</option>
+              <option>TRUCK DRIVER</option>
+              <option>WASTE COLLECTOR (TRUCK)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Names -->
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Enter First Name" required>
+          </div>
+          <div class="form-group">
+            <label>Middle Name</label>
+            <input type="text" placeholder="Enter Middle Name" required>
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Enter Last Name" required>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone No.</label>
+            <input type="text" placeholder="Enter Phone Number" required>
+          </div>
+          <div class="form-group">
+            <label>Email ID</label>
+            <input type="email" placeholder="Enter Email" required>
+          </div>
+          <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="date" required>
+          </div>
+        </div>
+
+        <!-- Address + Gender -->
+        <div class="form-row">
+          <div class="form-group address">
+            <label>Address</label>
+            <input id="address" type="text" placeholder="Start typing address..." required>
+          </div>
+          <a href="javascript:void(0)" class="address12" id="fetchDetails">🔍</a>
+          <div class="form-group gender">
+            <label>Gender</label>
+            <select required>
+              <option selected disabled>Select Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Hidden Address Fields -->
+        <input type="hidden" name="street" id="street">
+        <input type="hidden" name="city" id="city">
+        <input type="hidden" name="state" id="state">
+        <input type="hidden" name="country" id="country">
+        <input type="hidden" name="postalCode" id="postalCode">
+
+        <!-- Address Details Box -->
+        <div id="detailsBox" class="details-box"></div>
+
+        <!-- Password -->
+        <div class="form-row">
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="Enter Password" required>
+          </div>
+          <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" placeholder="Confirm Password" required>
+          </div>
+        </div>
+
+        <!-- Register Button -->
+        <div class="form-actions">
+          <button type="submit" class="btnRegister">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="register.js"></script>
+</body>
+</html>

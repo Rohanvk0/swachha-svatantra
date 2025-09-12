@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add a little bit of body text</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="service.css">
+</head>
+<body>
+    <div id="navbar"></div>
+   <h1>“Dear Citizen, together we strive for a cleaner today and a greener tomorrow – turning waste into a resource for a better future.”</h1>
+
+      <main> 
+    <section class="card-grid">
+        <a href="complaint.html" class="card">    
+        <div class="circle"></div>
+        <p id="long">Write a Complaint</p>
+    </a><a href="complaint.html" class="card">    
+        <div class="circle"></div>
+        <p id="long">Arrange Aa Event</p>
+    </a>
+    <a href="complaint.html" class="card">    
+        <div class="circle"></div>
+        <p id="long">Find a garbage Truck</p>
+    </a>
+    <a href="complaint.html" class="card">    
+        <div class="circle"></div>
+        <p id="long">Check The Timing of Truck </p>
+    </a>
+    <a href="complaint.html" class="card">    
+        <div class="circle"></div>
+        <p id="long">Encourage a Worker</p>
+    </a><a href="complaint.html" class="card">    
+        <div class="circle"></div>
+        <p id="long"> Rate Our Service</p>
+    </a>
+    </section>
+    <section class="body-text">
+      <p>
+        At [Your Project/Portal Name], we offer complete solid waste management solutions to create cleaner and healthier communities. Our services 
+        begin with efficient door-to-door collection from households, institutions, and businesses, ensuring waste is managed in a safe and hygienic manner.
+         We encourage segregation at source, helping citizens separate biodegradable, recyclable, and hazardous waste to reduce landfill pressure and promote recycling.
+          Collected materials are sent to certified recyclers, turning waste into valuable resources and supporting a circular economy. For non-recyclable waste, we adopt safe disposal methods that follow environmental standards and protect public health.
+           Through our smart platform, citizens can register complaints, track service requests, and access transparent updates, ensuring accountability in every step. Alongside operations, we run awareness programs and community campaigns to inspire eco-friendly habits. 
+           By combining technology, sustainable practices, and public participation, we aim to transform waste into opportunity and build a greener future.
+      </p>
+    </section>
+  </main>
+  
+    <div id="Contact">
+    <div class="container-contact">
+      <div class="row1">
+        <div class="contact-left">
+          <h3 class="sub-title1">Contact Us</h3>
+          <p class="color">Email: saurabhshitlaprasadtiwari141@gmail.com</p>
+          <p class="color">Phone no: 8888089807</p>
+          <p class="color">Address: Plot no.10, Hasanbag police chowki, Nagpur, Maharashtra 440009</p>
+          <div class="decor-square">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.4371150745455!2d79.12195197471723!3d21.134995884122283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c75b30f11233%3A0x8e033e88fb3bf790!2sHasanbag%20Police%20Chowki!5e0!3m2!1sen!2sin!4v1756480417074!5m2!1sen!2sin"
+              width="400" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form>
+            <input type="text" name="Name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="Message" rows="4" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script>
+        fetch("nav12.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+    </script>
+  <script src="segarition.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url("all images/WhatsApp Image 2025-08-16 at 14.40.14_40396199.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* logo left, links right */
+  padding: 0 40px;
+}
+
+.brand img {
+  margin-top: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+.norms {
+  display: flex;
+  gap: 30px; /* spacing between links */
+}
+
+.norms #normal{
+  font-size: 17px;
+  text-decoration: none; /* remove underline in all cases */
+  color: black;
+  font-family:'Times New Roman', Times, serif;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.norms #normal:hover {
+  color: blue; /* only color changes on hover */
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background: rgba(255,255,255,0.44);
+  margin-left: 30%;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 1000px;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+  min-height: 500px;
+  backdrop-filter: blur(0.3px);
+  border: 1.5px solid black;
+}
+
+/* Panels */
+.left-panel, .right-panel {
+  flex: 1;
+  padding: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-panel {
+  background: transparent;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+  height: 140%;
+  object-fit: contain;
+  align-items: end;
+
+}
+
+.cleaning-icons {
+  margin-top: -100px;
+  margin-bottom: 0px;
+}
+
+  /*  .right-panel {
+  border-left: 2px dashed #121228;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}     */
+.right-panel {
+  position: relative;   /* so pseudo-element is positioned inside */
+  flex: 1;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* dotted line */
+.right-panel::before {
+  content: "";
+  position: absolute;
+  left: 0;              /* stick to left edge */
+  top: 50px;            /* start 50px from top */
+  height: 400px;        /* length of dotted line */
+  border-left: 3px dashed #001a1d;
+}                                                                                        
+
+
+/* Welcome text */
+.welcome-text {
+  text-align: center;
+  
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.subtitle {
+  margin: -12px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+h2 {
+  margin: -1px 0 8px 0;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.role-label {
+  font-weight: 600;
+  color: rgb(96,60,155);
+  margin: 40px 0 8px 0;
+  font-weight: bold;
+}
+
+/* Role Buttons */
+.role-buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.role-btn {
+  background: #49ccd7;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 22px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.18s, transform 0.18s;
+}
+
+.role-btn:hover {
+  background: #0096c7;
+}
+
+/* Active role button */
+.role-btn.active-role {
+  background: #0077b6;
+  color: #fff;
+  transform: scale(1.05);
+  font-weight: bold;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  gap: 16px;
+  max-width: 300px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  width: 100%;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 8px;
+  background: #eaf5ff;
+  font-size: 1rem;
+  padding-left: 40px; /* space for icon */
+  
+}
+
+.input-group i {
+  position: absolute;
+  left: -45px;              /* place icon inside input instead of negative value */
+  top: 40%;                /* vertical center */
+  transform: translateY(-50%);
+  font-size: 22px;
+  color:blank;             /* set icon color (you can change) */
+}
+
+
+.input-group input:focus {
+  outline: 2px solid #49ccd7;
+}
+
+/* Forgot links */
+.forgot-link {
+  font-size: 0.9em;
+  color: #0c13e7;
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+  color: #0e16f6;
+}
+
+/* Sign In Button */
+.sign-in-btn {
+  background: linear-gradient(90deg,#89CFF0 50%, #b1a5e3 100%);
+  color: #222;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-size: 1.05em;
+  font-weight: 600;
+  margin-top: 12px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px #ccc;
+  transition: background 0.2s;
+}
+
+.sign-in-btn:hover {
+  background: #0077b6;
+  color: #fff;
+}
+
+/* Register Text */
+.register-text {
+  font-size: 1em;
+  margin-top: -15px;
+  text-align: center;
+  color: #333;
+}
+
+.register-link {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}

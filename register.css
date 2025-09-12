@@ -1,0 +1,237 @@
+/* Reset */
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+.brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* logo left, links right */
+  padding: 0 40px;
+}
+
+.brand img {
+  margin-top: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+.norms {
+  display: flex;
+  gap: 30px; /* spacing between links */
+}
+
+.norms #normal{
+  font-size: 17px;
+  text-decoration: none; /* remove underline in all cases */
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.norms #normal:hover {
+  color: blue; /* only color changes on hover */
+}
+
+
+
+.register {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.register-box {
+  display: flex;
+  max-width: 1100px;
+  margin-bottom: 0px;
+  width: 100%;
+  margin-top: -130px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+}
+
+/* Left Section */
+.register-left {
+  flex: 0.8;
+  background: #3931af;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-left .logo {
+  width: 80px;
+  margin: 0 auto 20px;
+}
+
+.register-left h2 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.register-left p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: gold;
+  font-weight: bold;
+}
+
+.register-left .btn-light {
+  background: #fff;
+  color: #3931af;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.register-left .btn-light:hover {
+  background: #ddd;
+}
+
+/* Right Section */
+.register-right {
+  flex: 2.2;
+  background: #e6f2ff;
+  padding: 30px;
+}
+
+.register-right h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group.role {
+  flex: none;
+  width: 200px;
+}
+.form-group.employee-id {
+  flex: none;
+  width: 180px;
+  margin-left: 20px;
+}
+.form-group.job {
+  flex: none;
+  width: 250px;
+  margin-left: 20px;
+}
+
+.form-group.address {
+  flex: none;
+  width: 50%;
+}
+.address12 {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  height: 40px;
+  margin-top: 24px;
+  margin-left: -13px;
+  border-radius: 10px;
+  background-color: #a64bf4;
+  color: #fff;
+}
+.details-box {
+  margin-top: 15px;
+  padding: 10px;
+  background: #fff;
+  border: 1px dashed #ccc;
+  border-radius: 6px;
+  display: none;
+  font-size: 14px;
+}
+
+.form-group.gender {
+  flex: none;
+  width: 30%;
+  margin-left: 62px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+input, select, textarea {
+  border: 2px solid #bca8a8;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  background: #e6f2ff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #3931af;
+  box-shadow: 0 0 6px rgba(57,49,175,0.4);
+  outline: none;
+}
+
+/* Buttons */
+.form-actions {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.btnRegister {
+  background: #a64bf4;
+  color: #fff;
+  padding: 12px 40px;
+  border-radius: 25px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btnRegister:hover {
+  background: #7d2ae8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .register-box {
+    flex-direction: column;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+  .form-actions {
+    text-align: center;
+  }
+}

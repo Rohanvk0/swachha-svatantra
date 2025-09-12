@@ -1,0 +1,227 @@
+
+  :root{
+  --bg:#fafafd;
+  --ink:#0f172a;
+  --muted:#6b7280;
+  --brand:#ff986f;         /* orange nav */
+  --accent:#22c55e;        /* green pills */
+  --card:#ffffff;
+  --ring:#e5e7eb;
+  --pink:#f462b6;
+  --shadow: 0 10px 24px rgba(2,8,23,.08);
+  --radius:18px;
+  --radius-lg:22px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+.topper{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu,
+               Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji",
+               "Segoe UI Emoji";
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.5;
+}
+
+/* Topbar */
+.topbar{
+  background:#d9d9de;
+  color:#111827;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:.4rem .8rem;
+  font-weight:600;
+  font-size:.86rem;
+}
+.topbar__social a{display:inline-grid;place-items:center;width:28px;height:28px;margin-left:.4rem;text-decoration:none;color:inherit}
+.i{display:inline-block;width:29px;height:29px;border-radius:4px;background:currentColor}
+.i-fb{background:#1877f2}
+.i-wa{background:#25d366}
+.i-yt{background:#ff0000}
+
+/* Brand Row */
+.brand{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 16px;
+  margin-bottom: -30px;
+  
+}
+.brand_logo img{
+    height: 70px;
+    width: auto;
+    display: block;
+  
+}
+.brand__title{
+  font-size:56px;
+  font-weight:900;
+  letter-spacing:1px
+}
+.flag-wings img{
+  display:flex;
+  margin-top: -45px;
+  gap:14px;
+  align-items:center;
+  
+  height: 50px;
+  width: 120px;
+ 
+}
+/* Container */
+.header-sign-search {
+  display: flex;
+  justify-content: flex-end;   /* align to right */
+  align-items: center;         /* vertical alignment */
+  gap: 20px;                   /* spacing between button & search */
+  margin-top: -20px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;             /* responsive wrapping */
+}
+
+/* Sign In button */
+.header-sign-search__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #f4f0f0;
+  background-color: #1d4ed8;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  height: 35px;               /* fixed height for alignment */
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.header-sign-search__btn:hover {
+  background-color: #3b82f6;
+  border: 2px black;
+  transform: translateY(-2px);
+}
+
+/* Search Form */
+.header-sign-search__form {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #c7c7c7;
+  height: 35px;                /* match Sign In button height */
+}
+
+/* Search input */
+.header-sign-search__form input[type="text"] {
+  flex: 1;                     /* input grows to fill space */
+  padding: 20px 12px;  
+  background: rgb(255, 255, 255);    
+  color: #010000;       /* vertical padding 0, height controlled by form */
+  font-size: 16px;
+  margin-top: -3px;
+  margin-left: -3px;
+  outline: none;
+  
+}
+
+/* Search button */
+.header-sign-search__form button {
+  padding: 0 16px;             /* horizontal padding */
+  background-color: #4828eb;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;                /* match Sign In button */
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Button hover */
+.header-sign-search__form button:hover {
+  background-color: #9eb2cb;
+  color: #100000;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustment */
+@media (max-width: 600px) {
+  .header-sign-search {
+    justify-content: center;
+    gap: 10px;
+  }
+  .header-sign-search__form {
+    width: 100%;
+  }
+}
+
+/*  NAVIGATION BAR */
+.nav {
+  background: var(--brand);
+  margin: 1px 16px 12px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  position: static;
+  top: 0;
+  z-index: 20;
+}
+
+.nav__toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 13px 14px;
+  font-size: 22px;
+}
+
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Adjusted for less gap */
+  gap: 10%;
+  padding: 8px 8px;
+  list-style: none;
+}
+
+/* Make nav vertical layout */
+.nav__list a {
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column; /* stack icon above text */
+  align-items: center;
+  text-align: center;
+  padding: 4px 8px;
+  text-decoration: none;
+  color: rgb(15, 0, 0); /* Added for better visibility against dark background */
+}
+
+/* Icons */
+.nav__list a i {
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* Text below icon */
+.nav__list a span {
+  margin-top: 1px; /* Reduced gap */
+  display: block;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+/* Hover only on text */
+.nav__list a span:hover {
+  background: rgba(255, 255, 255, 0.4);
+}

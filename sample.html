@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complaint Dashboard</title>
+  <link rel="stylesheet" href="sample.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+  <!-- Navbar placeholder -->
+  <div id="navbar"></div>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top"></div>
+      <nav>
+        <ul>
+          <li class="menu-item active">Complaint Section</li>
+          <li class="menu-item">Events Section</li>
+          <li class="menu-item">Track the Truck</li>
+          <li class="menu-item">Check Time for Truck</li>
+          <li class="menu-item">Encourage the Employee </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1>Welcome to the Dashboard</h1>
+
+      <section class="card-grid">
+        <div class="card" onclick="showSub('toilet', this)">
+          <div class="card-icon"></div>
+          <div class="card-text">Public Toilets & Sanitation</div>
+        </div>
+        <div class="card" onclick="showSub('waste', this)">
+          <div class="card-icon"></div>
+          <div class="card-text">Waste & Garbage Management</div>
+        </div>
+        <div class="card" onclick="showSub('drainage', this)">
+          <div class="card-icon"></div>
+          <div class="card-text">Drainage & Sewerage Issues</div>
+        </div>
+        <div class="card" onclick="showSub('construction', this)">
+          <div class="card-icon"></div>
+          <div class="card-text">Construction & Debris</div>
+        </div>
+        <div class="card" onclick="showSub('sweeping', this)">
+          <div class="card-icon"></div>
+          <div class="card-text">Street Cleaning / Sweeping</div>
+        </div>
+        <div class="card" onclick="showSub('septic', this)">
+          <div class="card-icon"></div>
+          <div class="card-text">Septic Tank Issues</div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Subcategory Panels -->
+      <section id="subcategoryPanel">
+        <!-- Toilet Subcategory -->
+        <div id="toilet" class="subcategory">
+          <h2>🚽 Public Toilets & Sanitation</h2>
+          <button data-complaint-type="Yellow Spot (Public Urination Spot)">Yellow Spot (Public Urination Spot)</button>
+          <button data-complaint-type="No Electricity in Public Toilet">No Electricity in Public Toilet</button>
+          <button data-complaint-type="No Water Supply in Public Toilet">No Water Supply in Public Toilet</button>
+          <button data-complaint-type="Public Toilet Blockage">Public Toilet Blockage</button>
+          <button data-complaint-type="Open Defecation">Open Defecation</button>
+        </div>
+
+        <!-- Waste Subcategory -->
+        <div id="waste" class="subcategory">
+          <h2>🗑️ Waste & Garbage Management</h2>
+          <button data-complaint-type="Dustbins Not Cleaned">Dustbins Not Cleaned</button>
+          <button data-complaint-type="Garbage Dump">Garbage Dump</button>
+          <button data-complaint-type="Garbage Vehicle Not Arrived">Garbage Vehicle Not Arrived</button>
+          <button data-complaint-type="Burning Of Garbage in Open">Burning Of Garbage in Open</button>
+          <button data-complaint-type="Dead Animal(s)">Dead Animal(s)</button>
+          <button data-complaint-type="Cleanliness Target Unit">Cleanliness Target Unit</button>
+        </div>
+
+        <!-- Other Subcategories -->
+        <div id="drainage" class="subcategory">
+          <h2>💧 Drainage & Sewerage Issues</h2>
+          <button data-complaint-type="Overflow of Sewerage Or Storm Water">Overflow of Sewerage Or Storm Water</button>
+          <button data-complaint-type="Open Manhole Or Drains">Open Manhole Or Drains</button>
+          <button data-complaint-type="Unsafe Manhole Entry">Unsafe Manhole Entry</button>
+          <button data-complaint-type="Improper Disposal Of Fecal Waste/Septage">Improper Disposal Of Fecal Waste/Septage</button>
+          <button data-complaint-type="Stagnant Water On The Road">Stagnant Water On The Road</button>
+        </div>
+
+        <div id="construction" class="subcategory">
+          <h2>🏗️ Construction & Debris</h2>
+          <button data-complaint-type="Debris Removal/Construction Material">Debris Removal/Construction Material</button>
+        </div>
+
+        <div id="sweeping" class="subcategory">
+          <h2>🧹 Street Cleaning</h2>
+          <button data-complaint-type="Sweeping Not Done">Sweeping Not Done</button>
+        </div>
+
+        <div id="septic" class="subcategory">
+          <h2>🏠 Septic Tank Issues</h2>
+          <button data-complaint-type="Overall Of Septic Tank">Overall Of Septic Tank</button>
+        </div>
+      </section>
+
+      <section class="texture">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged.
+        </p>
+      </section>
+    </main>
+
+    <!-- Complaint Form -->
+    <div class="form-container" id="complaint-form">
+      <h2 class="form-title">Online Complaint Form</h2>
+      <form>
+        <div class="form-row">
+          <label for="select-complaint">Select the Complaint :</label>
+          <select id="select-complaint" class="subject-select">
+            <option value="">Select</option>
+            <!-- Add all options here -->
+          </select>
+        </div>
+
+        <div class="form-row" id="Username">
+          <label for="username">Username or Email :</label>
+          <input type="text" id="username" placeholder="Enter your username or email">
+        </div>
+
+        <div class="form-row" id="addr">
+          <label for="street">Address :</label>
+          <div class="address-section">
+            <div id="map" style="height: 300px;"></div>
+            <div class="loc-details">
+              <textarea id="full-address" class="address-line" rows="2" placeholder="Full Address"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="reason">Reason :</label>
+          <div class="desc-section">
+            <textarea id="reason" class="desc-input" rows="1" placeholder="Enter reason..."></textarea>
+            <div class="desc-tags">
+              <button type="button" class="tag-btn" onclick="addTag('Dirty')">Dirty</button>
+              <button type="button" class="tag-btn" onclick="addTag('Disease')">Disease</button>
+              <button type="button" class="tag-btn" onclick="addTag('Pollution')">Pollution</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="extra-reason">Additional Information:</label>
+          <textarea id="extra-reason" class="reason-input" rows="2" placeholder="Add more information if needed"></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="photo">Add a Photo :</label>
+          <input type="file" id="photo" accept="image/*" hidden>
+          <button type="button" class="camera-btn" id="camera-btn"><i class='bxr bxs-camera-alt' style='color:#000'></i></button>
+        </div>
+
+        <div id="photo-options" class="photo-options">
+          <button id="live-photo-btn">Take Live Photo</button>
+          <button id="upload-photo-btn">Upload Photo</button>
+          <button id="close-modal">Cancel</button>
+        </div>
+
+        <button id="sub">Submit</button>
+      </form>
+    </div>
+
+    <div id="thankyou-message">
+      Thank you! Your complaint has been submitted.
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Load navbar
+    fetch("nav12.html")
+      .then(res => res.text())
+      .then(data => {
+        const container = document.getElementById("navbar");
+        container.innerHTML = data;
+        container.querySelectorAll("script").forEach(oldScript => {
+          const newScript = document.createElement("script");
+          newScript.textContent = oldScript.textContent;
+          document.body.appendChild(newScript);
+        });
+      });
+  </script>
+  <script src="complaint.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</body>
+</html>

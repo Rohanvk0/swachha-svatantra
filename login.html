@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Swachhata Sewa</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <script defer src="login.js"></script>
+</head>
+<body>
+   <div class="brand">
+    <img src="all images/Screenshot_2025-08-28_110221-removebg-preview (1).png" alt="logo">
+    <div class="norms"> 
+      <a href="segrigation.html" id="normal"> Home</a>
+      <a href="segrigation.html" id="normal"> About</a>
+      <a href="service.html" id="normal">My Services</a>
+      <a href="complaint.html" id="normal">Complaint</a>
+      <a href="segrigation.html" id="normal">Contact Us</a>
+    
+    </div>
+ </div>
+  <!-- Container -->
+  <div class="container">
+    <!-- Left Panel -->
+    <div class="left-panel">
+      <img src="all images/swachata-removebg-preview.png" alt="Swachhata Hi Sewa Logo" class="logo"/>
+      <div class="cleaning-icons">
+        <!-- Optional cleaning/worker icons -->
+      </div>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right-panel">
+      <div class="welcome-text">
+        <h2>HELLO !</h2>
+        <p class="subtitle">Sign in to your account.</p>
+      </div>
+
+      <label class="role-label">Choose Your Role</label>
+      <div class="role-buttons">
+        <button type="button" class="role-btn" onclick="selectRole('Citizen', event)">Citizen</button>
+        <button type="button" class="role-btn" onclick="selectRole('Employee', event)">Employee</button>
+        <button type="button" class="role-btn" onclick="selectRole('Admin', event)">Admin</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="login-form">
+        <div class="input-group">
+          <input id="username" type="text" placeholder="Enter your Email or Username" required />
+          <i class="bx bxs-user"></i>
+          <a href="#" class="forgot-link" style="color: rgb(46, 52, 224) ;">Forgot Username?</a>
+        </div>
+
+        <div class="input-group">
+          <input id="password" type="password" placeholder="Enter your password" required />
+          <i class="bx bxs-lock"></i>
+          <a href="#" class="forgot-link" style="color: rgb(46, 52, 224);">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="sign-in-btn">SIGN IN</button>
+
+        <b class="register-text">
+          Don’t have an account? <a href="register.html" class="register-link">Register</a>
+        </b>
+      </form>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>
